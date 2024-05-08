@@ -242,7 +242,7 @@ class LdapRealm extends AbstractRealm {
           helper.authenticate(m.getDN(), who.getPassword()).close();
         }
 
-        who.setDisplayName(apply(schema.accountFullName, m));
+        who.setDisplayName(apply(schema.accountFullName, m).trim());
         who.setUserName(apply(schema.accountSshUserName, m));
 
         if (schema.accountEmailAddress != null) {

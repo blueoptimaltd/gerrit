@@ -1,0 +1,4 @@
+---
+fixes:
+  - Preventing database update for every AuthN for LDAP accounts with missing attributes.
+  - Enable as-designed thread management of event indexing worker pool.
